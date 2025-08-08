@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancelot Productions | Meta Ads Audit Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F3F4F6;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+        }
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #004AAD;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4B5563;
+            margin-top: 0.5rem;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: #004AAD;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            text-align: center;
+            color: #4B5563;
+            max-width: 3xl;
+            margin: 0 auto 3rem auto;
+        }
+        .card {
+             background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 
+    NARRATIVE & VISUALIZATION PLAN
+    -------------------------------
+    1.  Hero Section: Hook with the most critical question - where did the money go? Use large numbers to show spend vs. unknown results. Goal: Inform. Method: Styled HTML.
+    2.  The Core Problem: Visually explain "Clicks vs. Conversions" to highlight the strategic flaw. Goal: Inform. Method: Styled HTML diagram.
+    3.  Audience Deep Dive: Use charts to reveal who and where the best audiences are. Goal: Compare. Method: Chart.js Bar and Doughnut charts.
+    4.  Creative Analysis: Showcase the best and worst performing creative types to provide clear direction. Goal: Compare. Method: Styled HTML cards.
+    5.  The Path Forward: Present the 4 key recommendations as a clear, actionable roadmap. Goal: Organize. Method: Styled HTML process flow.
+
+    CHART SELECTION & JUSTIFICATION (NO SVG / NO MERMAID JS)
+    -------------------------------------------------------
+    -   Geographic CPC Comparison: Horizontal Bar Chart (Chart.js). Best for comparing values across different categories (countries).
+    -   Gender & Age Spend Distribution: Doughnut Chart (Chart.js). Best for showing simple proportions of a whole.
+    -   Recommendation Flowchart: Structured HTML/CSS with Tailwind. Chosen to create a clear, linear process diagram without using prohibited libraries.
+
+    COLOR PALETTE
+    ---------------
+    -   Name: Brilliant Blues
+    -   Codes: #004AAD (Primary Dark Blue), #009FFD (Accent Blue), #2A2A72 (Secondary Dark Blue), #F3F4F6 (Background Gray).
+    -->
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-800 leading-tight">
+                Lancelot Productions<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#004AAD] to-[#009FFD]">Meta Ads Performance Audit</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">An analysis of the ad account from July 9 - August 7, 2025, revealing key opportunities for growth and efficiency.</p>
+        </header>
+
+        <section id="kpis" class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="kpi-card">
+                    <div class="kpi-value">€31,345</div>
+                    <div class="kpi-label">Total Ad Spend</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-value">166,722</div>
+                    <div class="kpi-label">Total Link Clicks</div>
+                </div>
+                <div class="kpi-card bg-[#004AAD]">
+                    <div class="kpi-value text-white">0</div>
+                    <div class="kpi-label text-gray-200">Ticket Sales Tracked</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="mb-20">
+            <h2 class="section-title">The Fundamental Disconnect</h2>
+            <p class="section-subtitle">The account is built to get clicks, not sell tickets. This is the single biggest opportunity for improvement. By optimizing for clicks, we're telling Meta to find people who like to browse, not people who like to buy.</p>
+            <div class="card max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center p-6 border-b-4 border-gray-200 md:border-b-0 md:border-r-4">
+                        <div class="text-6xl mb-4">🖱️</div>
+                        <h3 class="text-xl font-bold text-gray-500">Current Strategy: Optimize for Clicks</h3>
+                        <p class="mt-2 text-gray-600">Finds users who are most likely to click a link, resulting in high-volume but low-quality traffic. The true ROI is unknown.</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="text-6xl mb-4">🎟️</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Recommended Strategy: Optimize for Sales</h3>
+                        <p class="mt-2 text-gray-600">Finds users who are most likely to purchase a ticket, leading to higher quality traffic and a measurable Return On Ad Spend (ROAS).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="audience" class="mb-20">
+            <h2 class="section-title">Uncovering the Winning Audience</h2>
+            <p class="section-subtitle">The data shows clear patterns in who is responding to the ads and where the most efficient traffic comes from. We must focus our budget on these winners.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="card">
+                    <h3 class="font-bold text-xl text-center mb-4">Cost Per Click Varies Dramatically by Country</h3>
+                    <div class="chart-container">
+                        <canvas id="countryChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-xl text-center mb-4">Demographic Performance: Age & Gender</h3>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="chart-container !h-64">
+                            <canvas id="genderChart"></canvas>
+                        </div>
+                        <div class="chart-container !h-64">
+                            <canvas id="ageChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center text-gray-600">
+                        <p><span class="font-bold text-[#004AAD]">Females</span> and the <span class="font-bold text-[#004AAD]">25-44 age group</span> are the most engaged and cost-effective audiences to target.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="creative" class="mb-20">
+            <h2 class="section-title">Creative That Captivates</h2>
+            <p class="section-subtitle">The account has excellent creative assets. By analyzing the best and worst performers, we can build a repeatable formula for success.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card border-t-4 border-green-500">
+                    <h3 class="font-bold text-lg text-green-600">The Efficiency King: Split, Croatia Ad</h3>
+                    <p class="text-4xl font-black my-2 text-green-500">€0.04 <span class="text-lg font-semibold">CPC</span></p>
+                    <p class="text-gray-600"><span class="font-bold">Why it works:</span> High-quality video combined with a powerful hook ("WITH THE OSCAR WINNER"). This element of prestige drives high-quality, low-cost clicks.</p>
+                </div>
+                 <div class="card border-t-4 border-blue-500">
+                    <h3 class="font-bold text-lg text-blue-600">The Attention Grabber: Detroit, USA Ad</h3>
+                    <p class="text-4xl font-black my-2 text-blue-500">6.66% <span class="text-lg font-semibold">CTR</span></p>
+                    <p class="text-gray-600"><span class="font-bold">Why it works:</span> The text "LIVE IN CONCERT" creates immediate excitement. The direct, benefit-driven copy is extremely effective at capturing user attention.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2 class="section-title">The Path to Profitability</h2>
+            <p class="section-subtitle">A 4-step plan to transform the account from a traffic-generation tool into a powerful, revenue-driving engine.</p>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="card flex items-center space-x-6">
+                    <div class="flex-shrink-0 text-4xl font-black text-[#009FFD]">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Implement Conversion Tracking</h3>
+                        <p class="text-gray-600 mt-1">Install the Meta Pixel on the final ticket purchase confirmation page. This is the non-negotiable first step to measuring success.</p>
+                    </div>
+                </div>
+                <div class="card flex items-center space-x-6">
+                    <div class="flex-shrink-0 text-4xl font-black text-[#009FFD]">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Relaunch with a Sales Objective</h3>
+                        <p class="text-gray-600 mt-1">Pause "Link Click" campaigns and create new "Sales" campaigns optimizing for "Purchases" to align ad spend with revenue goals.</p>
+                    </div>
+                </div>
+                <div class="card flex items-center space-x-6">
+                    <div class="flex-shrink-0 text-4xl font-black text-[#009FFD]">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Consolidate & Scale Audiences</h3>
+                        <p class="text-gray-600 mt-1">Shift from single-city ad sets to broader regional campaigns. Focus budget on winning demographics (Females, 25-44) to improve efficiency.</p>
+                    </div>
+                </div>
+                <div class="card flex items-center space-x-6">
+                    <div class="flex-shrink-0 text-4xl font-black text-[#009FFD]">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Develop a Retargeting Funnel</h3>
+                        <p class="text-gray-600 mt-1">Create campaigns to re-engage website visitors who haven't purchased. This recaptures high-intent users and boosts overall sales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                           size: 14
+                        }
+                    }
+                }
+            }
+        };
+
+        const countryData = {
+            labels: ['Croatia', 'USA', 'Germany', 'France', 'Switzerland'],
+            datasets: [{
+                label: 'Average Cost Per Click (€)',
+                data: [0.04, 0.14, 0.21, 0.22, 0.32],
+                backgroundColor: [
+                    '#009FFD',
+                    '#2A2A72',
+                    '#004AAD',
+                    '#537ecf',
+                    '#89a6e8'
+                ],
+                borderColor: 'white',
+                borderWidth: 2
+            }]
+        };
+
+        new Chart(document.getElementById('countryChart'), {
+            type: 'bar',
+            data: countryData,
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Cost Per Click (€)'
+                        }
+                    }
+                },
+                ...chartTooltipCallback
+            }
+        });
+
+        const genderData = {
+            labels: ['Female', 'Male'],
+            datasets: [{
+                label: 'Spend Distribution',
+                data: [70, 30],
+                backgroundColor: ['#004AAD', '#009FFD'],
+                hoverOffset: 4
+            }]
+        };
+
+        new Chart(document.getElementById('genderChart'), {
+            type: 'doughnut',
+            data: genderData,
+            options: {
+                maintainAspectRatio: false,
+                plugins: { ...chartTooltipCallback.plugins, title: { display: true, text: 'Spend by Gender (%)' } }
+            }
+        });
+
+        const ageData = {
+            labels: ['18-24', '25-34', '35-44', '45-54', '55+'],
+            datasets: [{
+                label: 'Spend Distribution',
+                data: [15, 35, 30, 15, 5],
+                backgroundColor: ['#89a6e8', '#009FFD', '#004AAD', '#537ecf', '#2A2A72'],
+                hoverOffset: 4
+            }]
+        };
+
+        new Chart(document.getElementById('ageChart'), {
+            type: 'doughnut',
+            data: ageData,
+            options: {
+                maintainAspectRatio: false,
+                plugins: { ...chartTooltipCallback.plugins, title: { display: true, text: 'Spend by Age (%)' } }
+            }
+        });
+    </script>
+
+</body>
+</html>
